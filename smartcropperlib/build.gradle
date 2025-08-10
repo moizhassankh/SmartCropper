@@ -1,18 +1,19 @@
 plugins {
     id 'com.android.library'
-    //id 'maven-publish'
+    id 'com.vanniktech.maven.publish'
+    id 'com.gradleup.nmcp'
 }
 
 android {
-    namespace="me.pqpo.smartcropperlib"
+    namespace="com.moizhassan.smartcropper"
     ndkVersion '25.1.8937393'
-    compileSdkVersion 29
+    compileSdk COMPILE_SDK_VERSION as int
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 10
-        versionName "2.1.4"
+        minSdk MIN_SDK_VERSION as int
+        targetSdk TARGET_SDK_VERSION as int
+        versionCode VERSION_NUMBER as int
+        versionName VERSION_NAME as String
 
         externalNativeBuild {
             cmake {
@@ -41,22 +42,5 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'org.tensorflow:tensorflow-lite:1.13.1'
+    api 'com.google.ai.edge.litert:litert:1.4.0'
 }
-
-/*
-publishing {
-    publications {
-        release(MavenPublication) {
-            //from components.release
-            groupId = 'com.github.pqpo'
-            artifactId = 'smartcropperlib'
-            version = '2.1.4'
-        }
-    }
-    repositories {
-        maven {
-            url "file://${buildDir}/repo"
-        }
-    }
-}*/

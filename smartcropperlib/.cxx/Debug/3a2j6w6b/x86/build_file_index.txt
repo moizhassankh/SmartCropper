@@ -1,0 +1,1 @@
+/Users/moizhassankhan/Documents/GitHub/SmartCropper/smartcropperlib/CMakeLists.txt

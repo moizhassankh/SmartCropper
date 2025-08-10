@@ -2,7 +2,7 @@
 
 buildscript {
     ext {
-        agp_version = '8.2.2'
+        agp_version = '8.7.3'
     }
     repositories {
         google()
@@ -11,6 +11,11 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$agp_version"
     }
+}
+
+plugins {
+    id 'com.vanniktech.maven.publish' version '0.34.0' apply false
+    id("com.gradleup.nmcp") version "0.0.7" apply false
 }
 
 allprojects {

@@ -33,5 +33,4 @@ dependencies {
     implementation project(':smartcropperlib')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'pub.devrel:easypermissions:3.0.0'
-//    api 'com.github.pqpo:SmartCropper:v2.1.1'
 }
